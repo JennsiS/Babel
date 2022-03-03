@@ -1,0 +1,39 @@
+/*!*************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/localizacion/localizacion.css ***!
+  \*************************************************************************************/
+button {
+  text-align: center;
+  margin: 2%;
+  display: block;
+}
+
+p {
+  text-align: justify;
+  margin: 3%;
+  color: black;
+}
+
+h5 {
+  color: black;
+}
+
+body {
+  background: #020024;
+  background: radial-gradient(circle, #020024 0%, #090979 35%, #00d4ff 100%);
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  color: white;
+  margin: 3%;
+}
+
+.mapa {
+  margin: 5%;
+  border-radius: 5%;
+}
+
+.p1 {
+  color: white;
+}

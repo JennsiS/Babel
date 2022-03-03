@@ -19,7 +19,7 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "bundle"),
+    path: path.resolve(__dirname, "bundle_babel"),
   },
   plugins: [
     new MiniCssExtractPlugin({
