@@ -1,0 +1,51 @@
+$bckg_color: rgb(35,203,221);
+$first_color: rgba(35,203,221,1);
+$second_color: rgba(151,44,253,1);
+$third_color: rgba(156,42,251,1);
+$fonts: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
+
+button {
+    text-align: center;
+    margin: 2%;
+    display: block;
+}
+
+p {
+    text-align: justify;
+    margin: 3%;
+}
+
+.divButtons {
+    text-align: center;
+}
+
+body {
+    background: $bckg_color;
+    background: linear-gradient(148deg, $first_color 0%, $second_color 96%, $third_color 100%); 
+    text-align: center;
+    color: white;
+    font-family: $fonts;
+}
+
+h1 {
+    color:black;
+    margin: 10%;
+}
+
+.lead {
+    color: black;
+}
+
+.asteroideImg {
+    margin: 5%;
+    border-radius: 5%;
+}
+
+.progress{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+

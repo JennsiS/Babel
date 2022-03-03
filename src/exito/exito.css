@@ -1,0 +1,15 @@
+body {
+  color: white;
+  background: #3bbd99;
+  background: linear-gradient(58deg, #3bbd99 0%, #b64199 56%, #f6534e 96%, #f64b53 100%);
+  text-align: center;
+}
+
+.divButton {
+  margin: 3%;
+}
+
+.gif {
+  border-radius: 5%;
+}
+/*# sourceMappingURL=exito.css.map */

@@ -1,0 +1,25 @@
+body {
+    font-family: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
+    color: white;
+}
+
+button {
+    text-align: center;
+    margin: 2%;
+    display: block;
+}
+
+p {
+    text-align: justify;
+    margin: 3%;
+}
+
+.divButton {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}

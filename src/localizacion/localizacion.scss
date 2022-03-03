@@ -1,0 +1,44 @@
+$bckg_color: rgb(2,0,36);
+$first_color: rgba(2,0,36,1);
+$second_color: rgba(9,9,121,1);
+$third_color: rgba(0,212,255,1);
+
+button {
+    text-align: center;
+    margin: 2%;
+    display: block;
+}
+
+p {
+    text-align: justify;
+    margin: 3%;
+    color: black;
+}
+
+h5{
+    color: black;
+}
+
+
+body {
+    background: $bckg_color;
+    background: radial-gradient(circle, $first_color 0%, $second_color 35%, $third_color 100%); 
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    color:white;
+    margin: 3%;
+}
+
+.mapa {
+    margin: 5%;
+    border-radius: 5%;
+}
+
+
+.p1{
+    color: white;
+}
+

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAMA,AAAA,IAAI,CAAC;EACD,KAAK,EAPI,KAAK;EAQd,UAAU,EAPK,OAAU;EAQzB,UAAU,EAAE,8DAA8D;EAC1E,UAAU,EAAE,MAAM;CAAG;;AAEzB,AAAA,UAAU,CAAC;EACP,MAAM,EAAE,EAAE;CAAG;;AAEjB,AAAA,CAAC,CAAC;EACE,UAAU,EAAE,OAAO;EACnB,MAAM,EAAE,EAAE;CAAG",
+    "sources": [
+        "fracaso.sass"
+    ],
+    "names": [],
+    "file": "fracaso.css"
+}

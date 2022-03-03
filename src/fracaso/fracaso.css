@@ -1,0 +1,16 @@
+body {
+  color: white;
+  background: #050100;
+  background: radial-gradient(circle, #050100 0%, #050100 60%, #6a0005 100%);
+  text-align: center;
+}
+
+.divButton {
+  margin: 3%;
+}
+
+p {
+  text-align: justify;
+  margin: 3%;
+}
+/*# sourceMappingURL=fracaso.css.map */

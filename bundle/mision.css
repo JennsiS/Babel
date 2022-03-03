@@ -1,0 +1,73 @@
+/*!*************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/mision/mision.css ***!
+  \*************************************************************************/
+button {
+    text-align: center;
+    margin: 2%;
+    display: block;
+  }
+  
+  body {
+    text-align: center;
+    font-family: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
+    background-image: linear-gradient( 102.4deg,  rgba(253,189,85,1) 7.8%, rgba(249,131,255,1) 100.3% );
+  }
+  
+  h1 {
+    color: black;
+    margin: 10%;
+  }
+  
+  .lead {
+    color: black;
+  }
+
+.btn-grad {background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC  51%, #02AAB0  100%)}
+.btn-grad {
+     margin: 3%;
+     margin-left: 45%;
+     padding: 5px 35px;
+     text-align: center;
+     text-transform: uppercase;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: white;            
+     box-shadow: 0 0 20px #eee;
+     border-radius: 10px;
+     display: block;
+   }
+
+   .btn-grad:hover {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
+  
+   .divButtons{
+     text-align: center;
+     align-items: center;
+   }
+
+   .btn-grad2 {background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%)}
+   .btn-grad2 {
+      margin: 3%;
+      margin-left: 44%;
+      padding: 5px 35px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;            
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .btn-grad2:hover {
+      background-position: right center; /* change the direction of the change here */
+      color: #fff;
+      text-decoration: none;
+    }
+   
+  
+
