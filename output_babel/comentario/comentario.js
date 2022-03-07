@@ -1,8 +1,7 @@
 "use strict";
 
-require("./comentario.css");
-
-require("animate.css");
+import './comentario.css';
+import 'animate.css';
 
 function newDiv(id, width, height, bckgColor) {
   let nDiv = document.createElement("div");
@@ -42,9 +41,13 @@ button.type = "button";
 button.className = "btn btn-light";
 button.innerHTML = "Regresar al inicio";
 
-button.onclick = function relocate_home() {
-  location.href = "index.html";
-};
+button.onclick = function () {
+  function relocate_home() {
+    location.href = "index.html";
+  }
+
+  return relocate_home;
+}();
 
 divButton.append(button);
 let footer = document.createElement("footer");

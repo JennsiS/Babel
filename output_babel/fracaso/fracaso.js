@@ -1,12 +1,8 @@
 "use strict";
 
-require("./fracaso.css");
-
-var _asteroide = _interopRequireDefault(require("./asteroide.gif"));
-
-require("animate.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import './fracaso.css';
+import fin from './asteroide.gif';
+import 'animate.css';
 
 function newDiv(id, width, height, bckgColor) {
   let nDiv = document.createElement("div");
@@ -41,7 +37,7 @@ let p1 = document.createElement("p");
 p1.innerHTML = "Has tomado una mala decisión, tus acciones no han cambiado en nada el curso del futuro. Ahora solo nos queda esperar que otro viajero pueda arreglar tus acciones y tú debes vivir con las consecuencias de lo que hiciste.";
 bodyDiv.appendChild(p1);
 let final = document.createElement('img');
-final.src = _asteroide.default;
+final.src = fin;
 final.width = "600";
 final.height = "400";
 bodyDiv.appendChild(final);
@@ -53,8 +49,12 @@ button.type = "button";
 button.className = "btn btn-danger";
 button.innerHTML = "Regresar al inicio";
 
-button.onclick = function relocate_home() {
-  location.href = "index.html";
-};
+button.onclick = function () {
+  function relocate_home() {
+    location.href = "index.html";
+  }
+
+  return relocate_home;
+}();
 
 divButton.append(button);

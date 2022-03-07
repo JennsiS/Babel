@@ -1,12 +1,8 @@
 "use strict";
 
-var _borrandoMemoria = _interopRequireDefault(require("./borrando-memoria.jpg"));
-
-require("./fuera.css");
-
-require("animate.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import borrando from './borrando-memoria.jpg';
+import './fuera.css';
+import 'animate.css';
 
 function newDiv(id, width, height, bckgColor) {
   let nDiv = document.createElement("div");
@@ -30,7 +26,7 @@ title1.innerHTML = "¡Adiós!";
 title1.className = "animate__animated animate__lightSpeedOutRight";
 col12.appendChild(title1);
 let memoryImg = document.createElement('img');
-memoryImg.src = _borrandoMemoria.default;
+memoryImg.src = borrando;
 memoryImg.className = "borrandoImg";
 memoryImg.width = "1000";
 memoryImg.height = "500";
@@ -52,8 +48,12 @@ button.type = "button";
 button.className = "btn btn-info";
 button.innerHTML = "Regresar al inicio";
 
-button.onclick = function relocate_home() {
-  location.href = "index.html";
-};
+button.onclick = function () {
+  function relocate_home() {
+    location.href = "index.html";
+  }
+
+  return relocate_home;
+}();
 
 divButton.append(button);

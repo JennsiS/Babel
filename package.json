@@ -14,6 +14,9 @@
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
+    "@babel/plugin-external-helpers": "^7.16.7",
+    "@babel/plugin-transform-jscript": "^7.16.7",
+    "@babel/plugin-transform-strict-mode": "^7.16.7",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
     "file-loader": "^6.2.0",

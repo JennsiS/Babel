@@ -1,16 +1,10 @@
 "use strict";
 
-require("./localizacion.css");
-
-var _guerra = _interopRequireDefault(require("./guerra.jpg"));
-
-var _enfermedad = _interopRequireDefault(require("./enfermedad.jpg"));
-
-var _mundo = _interopRequireDefault(require("./mundo.jpg"));
-
-var _plantaNuclear = _interopRequireDefault(require("./planta-nuclear.jpeg"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import './localizacion.css';
+import guerra from './guerra.jpg';
+import enfermedad from './enfermedad.jpg';
+import mundo from './mundo.jpg';
+import planta_nuclear from './planta-nuclear.jpeg';
 
 function newDiv(id, width, height, bckgColor) {
   let nDiv = document.createElement("div");
@@ -41,7 +35,7 @@ let title1 = document.createElement("h1");
 title1.innerHTML = "Elige tu localización";
 bodyDiv.appendChild(title1);
 let mapa = document.createElement('img');
-mapa.src = _mundo.default;
+mapa.src = mundo;
 mapa.className = "mapa";
 mapa.width = "1200";
 mapa.height = "600";
@@ -60,7 +54,7 @@ let divCard = document.createElement("div");
 divCard.className = "card";
 divCardGroup.appendChild(divCard);
 let cardImg = document.createElement("img");
-cardImg.src = _plantaNuclear.default;
+cardImg.src = planta_nuclear;
 cardImg.className = "card-img-top";
 divCard.appendChild(cardImg);
 let cardBody = document.createElement("div");
@@ -83,7 +77,7 @@ let divCard2 = document.createElement("div");
 divCard2.className = "card";
 divCardGroup.appendChild(divCard2);
 let cardImg2 = document.createElement("img");
-cardImg2.src = _enfermedad.default;
+cardImg2.src = enfermedad;
 cardImg2.className = "card-img-top";
 divCard2.appendChild(cardImg2);
 let cardBody2 = document.createElement("div");
@@ -106,7 +100,7 @@ let divCard3 = document.createElement("div");
 divCard3.className = "card";
 divCardGroup.appendChild(divCard3);
 let cardImg3 = document.createElement("img");
-cardImg3.src = _guerra.default;
+cardImg3.src = guerra;
 cardImg3.className = "card-img-top";
 divCard3.appendChild(cardImg3);
 let cardBody3 = document.createElement("div");
@@ -130,8 +124,12 @@ button.type = "button";
 button.className = "btn btn-secondary btn-sm";
 button.innerHTML = "Regresar al inicio";
 
-button.onclick = function relocate_home() {
-  location.href = "index.html";
-};
+button.onclick = function () {
+  function relocate_home() {
+    location.href = "index.html";
+  }
+
+  return relocate_home;
+}();
 
 bodyDiv.append(button);

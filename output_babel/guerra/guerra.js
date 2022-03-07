@@ -1,16 +1,10 @@
 "use strict";
 
-var _tension = _interopRequireDefault(require("../tension.mp3"));
-
-var _imagenGuerra = _interopRequireDefault(require("./imagen-guerra.jpg"));
-
-require("./guerra.css");
-
-var _decisionViaje = require("./decisionViaje");
-
-var _decisionAviso = require("./decisionAviso");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import musica from '../tension.mp3';
+import imagenGuerra from './imagen-guerra.jpg';
+import './guerra.css';
+import { decisionViaje } from './decisionViaje';
+import { decisionAviso } from './decisionAviso';
 
 function newDiv(id, width, height, bckgColor) {
   let nDiv = document.createElement("div");
@@ -38,7 +32,7 @@ progressbar.ariaValueMax = "100";
 progressbar.style.width = "45%";
 progress.appendChild(progressbar);
 let music = document.createElement("audio");
-music.src = _tension.default;
+music.src = musica;
 music.controls = "False";
 music.autoplay = "true";
 music.loop = "True";
@@ -54,7 +48,7 @@ let paragraph = document.createElement("p");
 paragraph.innerHTML = "Posted by ABC<br>23 de Septiembre del 2022<br><i>La llaman la tercera guerra mundial</i>";
 header.appendChild(paragraph);
 let guerraImg = document.createElement('img');
-guerraImg.src = _imagenGuerra.default;
+guerraImg.src = imagenGuerra;
 guerraImg.width = "1000";
 guerraImg.height = "600";
 bodyDiv.appendChild(guerraImg);
@@ -80,5 +74,5 @@ contenedorLista.appendChild(item1);
 let item2 = document.createElement("li");
 item2.innerHTML = '<a href="#decision-aviso">Avisar acerca del inminente Asteroide</a>';
 contenedorLista.appendChild(item2);
-(0, _decisionViaje.decisionViaje)();
-(0, _decisionAviso.decisionAviso)();
+decisionViaje();
+decisionAviso();

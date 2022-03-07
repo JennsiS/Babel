@@ -12,4 +12,9 @@ const presets = [
     ],
 ];
 
+const plugins = [["@babel/plugin-transform-jscript"],
+                ["@babel/plugin-external-helpers"],
+                ["@babel/plugin-transform-strict-mode"]];
+
 module.exports = { presets };
+module.exports = { plugins };

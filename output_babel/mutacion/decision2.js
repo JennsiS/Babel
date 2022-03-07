@@ -1,11 +1,6 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.decision2 = void 0;
-
-const decision2 = () => {
+export const decision2 = () => {
   let bodyDiv = document.getElementById("bodyDivMutacion");
   let divHackeo = document.createElement("div");
   divHackeo.id = "decision-hackeo";
@@ -36,5 +31,3 @@ const decision2 = () => {
   result2.innerHTML = "CONOCE TU RESULTADO";
   divHackeo.appendChild(result2);
 };
-
-exports.decision2 = decision2;

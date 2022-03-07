@@ -1,16 +1,10 @@
 "use strict";
 
-require("./explosion.css");
-
-var _tension = _interopRequireDefault(require("../tension.mp3"));
-
-var _explosion2 = _interopRequireDefault(require("./explosion.jpg"));
-
-var _decisionEmpleo = require("./decisionEmpleo");
-
-var _decisionSecuestro = require("./decisionSecuestro");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import './explosion.css';
+import musica from '../tension.mp3';
+import explosion from './explosion.jpg';
+import { decisionEmpleo } from './decisionEmpleo';
+import { decisionSecuestro } from './decisionSecuestro';
 
 function newDiv(id, width, height, bckgColor) {
   let nDiv = document.createElement("div");
@@ -38,7 +32,7 @@ progressbar.ariaValueMax = "100";
 progressbar.style.width = "45%";
 progress.appendChild(progressbar);
 let music = document.createElement("audio");
-music.src = _tension.default;
+music.src = musica;
 music.controls = "False";
 music.autoplay = "true";
 music.loop = "True";
@@ -54,7 +48,7 @@ let paragraph = document.createElement("p");
 paragraph.innerHTML = "Posted by BBC<br>5 de marzo del 2022<br>La mayor catástrofe de este tipo acaba de suceder";
 header.appendChild(paragraph);
 let covidImg = document.createElement('img');
-covidImg.src = _explosion2.default;
+covidImg.src = explosion;
 covidImg.width = "900";
 covidImg.height = "500";
 bodyDiv.appendChild(covidImg);
@@ -80,5 +74,5 @@ contenedorLista.appendChild(item1);
 let item2 = document.createElement("li");
 item2.innerHTML = '<a href="#decision-secuestro">Secuestrar al director de la empresa</a>';
 contenedorLista.appendChild(item2);
-(0, _decisionEmpleo.decisionEmpleo)();
-(0, _decisionSecuestro.decisionSecuestro)();
+decisionEmpleo();
+decisionSecuestro();

@@ -1,11 +1,6 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.agregarBoton = void 0;
-
-const agregarBoton = () => {
+export const agregarBoton = () => {
   let bodyDiv = document.getElementById("bodyDivExito");
   let divButton = document.createElement("div");
   divButton.className = "divButton";
@@ -15,11 +10,13 @@ const agregarBoton = () => {
   button.className = "btn btn-info";
   button.innerHTML = "Regresar al inicio";
 
-  button.onclick = function relocate_home() {
-    location.href = "index.html";
-  };
+  button.onclick = function () {
+    function relocate_home() {
+      location.href = "index.html";
+    }
+
+    return relocate_home;
+  }();
 
   divButton.append(button);
 };
-
-exports.agregarBoton = agregarBoton;

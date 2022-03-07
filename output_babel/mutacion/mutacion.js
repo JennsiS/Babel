@@ -1,16 +1,10 @@
 "use strict";
 
-var _coronavirus = _interopRequireDefault(require("./coronavirus.jpg"));
-
-var _tension = _interopRequireDefault(require("../tension.mp3"));
-
-require("./mutacion.css");
-
-var _decision = require("./decision1");
-
-var _decision2 = require("./decision2");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import coronavirus from './coronavirus.jpg';
+import musica from '../tension.mp3';
+import './mutacion.css';
+import { decision1 } from './decision1';
+import { decision2 } from './decision2';
 
 function newDiv(id, width, height, bckgColor) {
   let nDiv = document.createElement("div");
@@ -38,7 +32,7 @@ progressbar.ariaValueMax = "100";
 progressbar.style.width = "45%";
 progress.appendChild(progressbar);
 let music = document.createElement("audio");
-music.src = _tension.default;
+music.src = musica;
 music.controls = "False";
 music.autoplay = "true";
 music.loop = "True";
@@ -54,7 +48,7 @@ let paragraph = document.createElement("p");
 paragraph.innerHTML = "Posted by CNN<br>10 de julio del 2022<br>La peor mutación registrada del coronavirus hasta ahora";
 header.appendChild(paragraph);
 let covidImg = document.createElement('img');
-covidImg.src = _coronavirus.default;
+covidImg.src = coronavirus;
 covidImg.width = "1200";
 covidImg.height = "600";
 bodyDiv.appendChild(covidImg);
@@ -80,5 +74,5 @@ contenedorLista.appendChild(item1);
 let item2 = document.createElement("li");
 item2.innerHTML = '<a href="#decision-hackeo">Hackear al embajador</a>';
 contenedorLista.appendChild(item2);
-(0, _decision.decision1)();
-(0, _decision2.decision2)();
+decision1();
+decision2();

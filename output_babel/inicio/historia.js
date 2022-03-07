@@ -1,26 +1,16 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.inicioHistoria = void 0;
-
-var _asteroide = _interopRequireDefault(require("./asteroide.jpg"));
-
-var _Aphelion = _interopRequireDefault(require("./Aphelion.mp3"));
-
-require("animate.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const inicioHistoria = () => {
+import asteroide from './asteroide.jpg';
+import aphelion from './Aphelion.mp3';
+import 'animate.css';
+export const inicioHistoria = () => {
   let title = document.createElement("h2");
   title.id = "historia";
   title.className = "animate__animated animate__bounce";
   title.innerHTML = "Programa de viajeros 2022";
   bodyDiv.appendChild(title);
   let asteroideImg = document.createElement('img');
-  asteroideImg.src = _asteroide.default;
+  asteroideImg.src = asteroide;
   asteroideImg.className = "asteroideImg";
   asteroideImg.width = "900";
   asteroideImg.height = "600";
@@ -28,7 +18,7 @@ const inicioHistoria = () => {
   let divAudio = document.createElement("div");
   bodyDiv.appendChild(divAudio);
   let music = document.createElement("audio");
-  music.src = _Aphelion.default;
+  music.src = aphelion;
   music.controls = "True";
   music.autoplay = "True";
   music.loop = "True";
@@ -47,9 +37,13 @@ const inicioHistoria = () => {
   button.className = "btn btn-info";
   button.innerHTML = "Mision";
 
-  button.onclick = function relocate_home() {
-    location.href = "mision.html";
-  };
+  button.onclick = function () {
+    function relocate_home() {
+      location.href = "mision.html";
+    }
+
+    return relocate_home;
+  }();
 
   divButtons.append(button);
   let button2 = document.createElement("button");
@@ -57,9 +51,13 @@ const inicioHistoria = () => {
   button2.className = "btn btn-dark";
   button2.innerHTML = "Estoy fuera";
 
-  button2.onclick = function relocate_home() {
-    location.href = "fuera.html";
-  };
+  button2.onclick = function () {
+    function relocate_home() {
+      location.href = "fuera.html";
+    }
+
+    return relocate_home;
+  }();
 
   divButtons.append(button2);
   let label1 = document.createElement("label");
@@ -77,5 +75,3 @@ const inicioHistoria = () => {
   progressbar.style.width = "0%";
   progress.appendChild(progressbar);
 };
-
-exports.inicioHistoria = inicioHistoria;

@@ -1,13 +1,7 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.startApp = void 0;
-
-require("./inicio.css");
-
-var _historia = require("./historia.js");
+import './inicio.css';
+import { inicioHistoria } from './historia.js';
 
 function newDiv(id, width, height, bckgColor) {
   let nDiv = document.createElement("div");
@@ -18,7 +12,7 @@ function newDiv(id, width, height, bckgColor) {
   return nDiv;
 }
 
-const startApp = () => {
+export const startApp = () => {
   let bodyDiv = newDiv("bodyDiv", 100, 100, "transparent");
   document.body.appendChild(bodyDiv);
   let jumbotron = document.createElement("div");
@@ -39,7 +33,5 @@ const startApp = () => {
   github.href = "https://github.com/JennsiS/Lab-6-Webpack";
   github.innerHTML = "Link del repositorio";
   container.appendChild(github);
-  (0, _historia.inicioHistoria)();
+  inicioHistoria();
 };
-
-exports.startApp = startApp;

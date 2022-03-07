@@ -1,14 +1,9 @@
 "use strict";
 
-require("./exito.css");
-
-var _celebracion = _interopRequireDefault(require("./celebracion.gif"));
-
-var _boton = require("./boton.js");
-
-require("animate.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import './exito.css';
+import celebracionGif from './celebracion.gif';
+import { agregarBoton } from './boton.js';
+import 'animate.css';
 
 function newDiv(id, width, height, bckgColor) {
   let nDiv = document.createElement("div");
@@ -43,9 +38,9 @@ let p1 = document.createElement("p");
 p1.innerHTML = "Tu esfuerzo ha valido la pena y has tomado la decisión correcta ¡Enhorabuena!";
 bodyDiv.appendChild(p1);
 let celebracion = document.createElement('img');
-celebracion.src = _celebracion.default;
+celebracion.src = celebracionGif;
 celebracion.className = "gif";
 celebracion.width = "900";
 celebracion.height = "500";
 bodyDiv.appendChild(celebracion);
-(0, _boton.agregarBoton)();
+agregarBoton();

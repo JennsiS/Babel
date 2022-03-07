@@ -1,11 +1,6 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.agregarBotones = void 0;
-
-const agregarBotones = () => {
+export const agregarBotones = () => {
   let bodyDiv = document.getElementById("bodyDivMision");
   let divButtons = document.createElement("div");
   divButtons.className = "divButtons";
@@ -15,9 +10,13 @@ const agregarBotones = () => {
   button.className = "btn-grad";
   button.innerHTML = "Estoy de acuerdo";
 
-  button.onclick = function relocate_home() {
-    location.href = "localizacion.html";
-  };
+  button.onclick = function () {
+    function relocate_home() {
+      location.href = "localizacion.html";
+    }
+
+    return relocate_home;
+  }();
 
   divButtons.append(button);
   let button2 = document.createElement("button");
@@ -25,11 +24,13 @@ const agregarBotones = () => {
   button2.className = "btn-grad2";
   button2.innerHTML = "No estoy de acuerdo";
 
-  button2.onclick = function relocate_home() {
-    location.href = "fuera.html";
-  };
+  button2.onclick = function () {
+    function relocate_home() {
+      location.href = "fuera.html";
+    }
+
+    return relocate_home;
+  }();
 
   divButtons.append(button2);
 };
-
-exports.agregarBotones = agregarBotones;

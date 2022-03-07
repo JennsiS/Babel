@@ -1,8 +1,7 @@
 "use strict";
 
-var _botones = require("./botones");
-
-require("./mision.css");
+import { agregarBotones } from './botones';
+import './mision.css';
 
 function newDiv(id, width, height, bckgColor) {
   let nDiv = document.createElement("div");
@@ -49,4 +48,4 @@ contenedorLista.appendChild(item3);
 let item4 = document.createElement("li");
 item4.innerHTML = "No te distraigas, tu misión es lo más importante.";
 contenedorLista.appendChild(item4);
-(0, _botones.agregarBotones)();
+agregarBotones();

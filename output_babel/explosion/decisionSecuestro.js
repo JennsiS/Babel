@@ -1,11 +1,6 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.decisionSecuestro = void 0;
-
-const decisionSecuestro = () => {
+export const decisionSecuestro = () => {
   let bodyDiv = document.getElementById("bodyDivExplosion");
   let divSecuestro = document.createElement("div");
   divSecuestro.id = "decision-secuestro";
@@ -36,5 +31,3 @@ const decisionSecuestro = () => {
   result2.innerHTML = "CONOCE TU RESULTADO";
   divSecuestro.appendChild(result2);
 };
-
-exports.decisionSecuestro = decisionSecuestro;
